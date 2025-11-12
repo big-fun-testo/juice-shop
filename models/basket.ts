@@ -34,7 +34,7 @@ const BasketModelInit = (sequelize: Sequelize) => {
         primaryKey: true,
         autoIncrement: true
       },
-      coupon: DataTypes.STRING, // INCLUDE IN THE Issue Explanation </code><h1>hello</h1><script>alert(1)</script> 
+      coupon: DataTypes.STRING, // INCLUDE IN THE Issue Explanation </code><h1>hello</h1><script>alert(1)</script>
       UserId: {
         type: DataTypes.INTEGER
       }
