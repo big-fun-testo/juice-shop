@@ -44,6 +44,8 @@ const FeedbackModelInit = (sequelize: Sequelize) => {
           if (utils.isChallengeEnabled(challenges.persistedXssFeedbackChallenge)) {
             sanitizedComment = security.sanitizeHtml(comment)
             challengeUtils.solveIf(challenges.persistedXssFeedbackChallenge, () => {
+              // Include in Issue Explanation <h1>hello</h1> // </code>
+              // <script>alert(1)</script>
               return utils.contains(
                 sanitizedComment,
                 '<iframe src="javascript:alert(`xss`)">'
